@@ -78,13 +78,13 @@ def key(event):
             ### Add your code for what you want to happen when you press r #####
             
     else: #-- non standard keys
-        if event.keysym == 'Up': set_velocity_body(drone, 5,0,0)
+        if event.keysym == 'Up': set_velocity_body(drone, -5,0,0)
             ### add your code for what should happen when pressing the up arrow ###
-        elif event.keysym == 'Down': set_velocity_body(drone, -5,0,0)
+        elif event.keysym == 'Down': set_velocity_body(drone, 5,0,0)
             ### add your code for what should happen when pressing the down arrow ###
-        elif event.keysym == 'Left': set_velocity_body(drone, 0,-5,0)
+        elif event.keysym == 'Left': set_velocity_body(drone, 0,5,0)
             ### add your code for what should happen when pressing the Left arrow ###
-        elif event.keysym == 'Right': set_velocity_body(drone, 0,5,0)
+        elif event.keysym == 'Right': set_velocity_body(drone, 0,-5,0)
             ### add your code for what should happen when pressing the Right arrow ###
 
 #****************************************************************************
