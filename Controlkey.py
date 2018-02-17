@@ -1,19 +1,10 @@
 
-#***************************************************************************
-# Title        : Assignment2_template.py
+#Juan Pablo Elizarraraz Oliva
+#A01632031
 #
-# Description  : This file is a starting point for assignment 2 it contains
-#                the main parts and pseudo code for you to complete with your 
-#                own code.
 #
-# Environment  : Python 2.7 Code. 
 #
-# License      : GNU GPL version 3
 #
-# Editor Used  : Sublime Text
-#
-#****************************************************************************
-
 #****************************************************************************
 # Imported functions, classes and methods
 #****************************************************************************
@@ -25,26 +16,6 @@ import Tkinter as tk
 #****************************************************************************
 #   Method Name     : set_velocity_body
 #
-#   Description     : Sends a MAVLINK velocity command in body frame reference
-#                     This means that the X, Y, Z axis will be in relation to the 
-#                     vehicle. 
-#                     Positive X values will move the drone forward
-#                     Positive Y values will move the drone Right
-#                     Positive Z values will move the drone down
-#                     The values for vx, vy and vz are in m/s, so sending a value
-#                     of say 5 in vx will move the drone forward at 5 m/s
-#
-#                     More information can be found here:
-#                     http://ardupilot.org/dev/docs/copter-commands-in-guided-mode.html
-#
-#   Parameters      : vehicle:  vehicle instance to send the command to
-#                     vx:       Velocity in the X axis 
-#                     vy
-#                     vz
-#
-#   Return Value    : None
-#
-#   Author           : tiziano fiorenzani
 #
 #****************************************************************************
 
@@ -62,15 +33,7 @@ def set_velocity_body(vehicle, vx, vy, vz):
     vehicle.flush()
 
 #****************************************************************************
-#   Method Name     : arm_and_takeoff
-#
-#   Description     : Add your takeoff function from your last assignment here
-#
-#   Parameters      : targetAltitude
-#
-#   Return Value    : None
-#
-#   Author           : You
+#For arming the drone and telling you when it is done
 #
 #****************************************************************************
 def arm_and_takeoff(TargetAltitude):
@@ -106,16 +69,7 @@ def arm_and_takeoff(TargetAltitude):
 #### your code here #####
 
 #****************************************************************************
-#   Method Name     : key
-#
-#   Description     : Callback for TkInter Key events
-#
-#   Parameters      : Event: tkinter event containing the key that was pressed
-#
-#   Return Value    : None
-#
-#   Author           : Juan Pablo Elizarraraz
-#
+# The following commands are for the drone to know what to do when an arrow key is pressed
 #****************************************************************************
 def key(event):
     if event.char == event.keysym: #-- standard keys
@@ -134,7 +88,7 @@ def key(event):
             ### add your code for what should happen when pressing the Right arrow ###
 
 #****************************************************************************
-#   MAIN CODE
+#   For connecting and for the altitude
 #
 #****************************************************************************
 
